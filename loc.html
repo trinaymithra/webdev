@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>track the user</title>
+	<script type="text/javascript">
+		function getPosition()
+		{
+			if (navigator.geolocation)
+			{
+				navigator.geolocation.getCurrentPosition(successPosition);
+			}
+			else
+				document.getElementbyId("result").innerHTML = "Your browser doesn't support geolocation API!!"
+		}
+		function successPosition(position)
+		{
+			var lat=position.coords.latitude;
+			var long = position.coords.longitude;
+
+			document.getElementbyId("result").innerHTML = "Latitude: " + lat + "<br />Longitude: "+ long
+
+		}
+	</script>
+</head>
+<body>
+	<div id="result"></div>
+	<button id="btnPosition" onclick="getPosition();">Get Current Position</button>
+</body>
+</html>
