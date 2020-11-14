@@ -20,10 +20,16 @@
 			document.getElementbyId("result").innerHTML = "Latitude: " + lat + "<br />Longitude: "+ long
 
 		}
+		function showcl()
+		{
+			document.getElementbyId("pr").innerHTML = "Button clicked"
+		}
 	</script>
 </head>
 <body>
 	<div id="result"></div>
 	<button id="btnPosition" onclick="getPosition();">Get Current Position</button>
+	<div id="ch"></div>
+	<button id="pr" onclick="showcl();">CLick here</button>
 </body>
 </html>
